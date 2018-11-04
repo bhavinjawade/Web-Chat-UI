@@ -1,0 +1,20 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chat.js",
+  "scripts": {
+    "start": "node chat.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "http": "0.0.0",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "redis": "^2.7.1",
+    "request": "^2.81.0",
+    "socket.io": "^2.0.2"
+  }
+}

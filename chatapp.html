@@ -1,0 +1,381 @@
+<html>
+
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/chatapp.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/jquery.emojipicker.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.emojipicker.js"></script>
+
+  <!-- Emoji Data -->
+  <link rel="stylesheet" type="text/css" href="css/jquery.emojipicker.tw.css">
+  <script type="text/javascript" src="js/jquery.emojis.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(e) {
+
+      $('#msg0').emojiPicker({
+      });
+      $('#msg1').emojiPicker({
+      });
+      $('#msg2').emojiPicker({
+      });
+      // keyup event is fired
+      $(".emojiable-question").on("keyup", function () {
+        //console.log("emoji added, input val() is: " + $(this).val());
+      });
+
+    });
+  </script>
+
+
+  
+</head>
+
+<body>
+
+   
+<div onclick=" openFriends()" class="open-chat on-click-margin" style="background: linear-gradient(to right, rgb(41, 142, 232), rgb(41, 142, 232));">
+    <img class="rotate-svg" src="assets/images/left-arrow.svg" height="25px" width="25px" style="position: absolute;top:90px;">
+  </div>
+  <div id="chat0" class="sidenav on-click-margin">
+    <div class=" chathead" onclick="openNav(1,this)"><img data-toggle="tooltip" data-placement="bottom" title="Ron!" class="photosmallsender" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+      <p class="title" id="user_name0"  data-toggle="tooltip" data-placement="bottom" title="Ron!" >NAME
+        <p class="noofmsgs">55</p>
+      </p>
+      <span class="close-chat-x" title="close" onclick="closeing(0)" >X</span>
+    </div>
+    <div class="chatarea" id="chatareaid0">
+      <p class="newdayline">16th August 2017</p>
+
+    </div>
+    <div class="textholder" id="textholderid0">
+      <textarea class="control-form emojiable-question" row=1 width='100%' id="msg0" placeholder="Write Your Message"></textarea>
+      <i class="fa fa-paper-plane send" onclick="send(0)" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div id="chat1" class="sidenav on-click-margin" style="right: 341px;">
+    <div class=" chathead" onclick="openNav(1,this)"><img data-toggle="tooltip" data-placement="bottom" title="Ron!" class="photosmallsender" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+      <p class="title" id="user_name1"  data-toggle="tooltip" data-placement="bottom" title="Ron!" >NAME
+
+        <p class="noofmsgs">55</p>
+      </p>
+      <span class="close-chat-x" title="close" onclick="closeing(1)" >X</span>
+    </div>
+    <div class="chatarea" id="chatareaid1">
+      <p class="newdayline">16th August 2017</p>
+
+    </div>
+    <div class="textholder" id="textholderid1">
+      <textarea class="control-form emojiable-question" id="msg1" placeholder="Write Your Message"></textarea>
+      <i class="fa fa-paper-plane send" onclick="send(1)" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div id="chat2" class="sidenav on-click-margin" style="right: 627px;">
+    <div class=" chathead" onclick="openNav(1,this)"><img data-toggle="tooltip" data-placement="bottom" title="Ron!" class="photosmallsender" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+      <p class="title" id="user_name2"  data-toggle="tooltip" data-placement="bottom" title="Ron!" >NAME
+        <p class="noofmsgs">55</p>
+      </p>
+
+<span class="close-chat-x" title="close" onclick="closeing(2)">X</span>
+
+    </div>
+    <div class="chatarea" id="chatareaid2">
+      <p class="newdayline">16th August 2017</p>
+    </div>
+    <div class="textholder" id="textholderid2">
+      <textarea class="control-form emojiable-question" id="msg2" placeholder="Write Your Message"></textarea>
+      <i class="fa fa-paper-plane send" onclick="send(2)" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div id="sideFriendsListId" class="sideFriendsList">
+    <p class="chat-wit-affiliates-text">Chat With other affiliates</p>
+
+<div style="width: 100% ;padding: 5px;" >
+       <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Search other Affiliates.." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            </div>
+
+    <ul>
+      <li id="us1" onclick="con('Ron',1)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Ron!" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li id="us2" onclick="con('Joe Dan',2)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Joe Dan" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Joe Dan
+          </div>
+          <span class="user-status-online user-status   pad-zero" style="display: none;" >online</span>
+          <span class="user-status-offline user-status " >offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online"  style="display: none;background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li id="us3" onclick="con('John',3)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="John" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            John
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li id="us1" onclick="con('Ron',1)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Ron!" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Ron
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Joe Dan',2)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Joe Dan" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Joe Dan
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('John',3)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="John" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            John
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Ron',1)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Ron!" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Ron
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Dan',2)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Dan" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Dan
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('John',3)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="John" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            John
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Ron',1)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Ron!" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Ron
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Dan',2)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Dan" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Dan
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('John',3)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="John" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            John
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Ron',1)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Ron!" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Ron
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Dan',2)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Dan" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Dan
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('John',3)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="John" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            John
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Ron',1)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Ron!" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Ron
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('Dan',2)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="Dan" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            Dan
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+      <li onclick="con('John',3)">
+        <div>
+          <div class=" user-img-div " style="display: inline-block;width: 18%;">
+            <img class="user-img" data-toggle="tooltip" data-placement="bottom" title="John" src="https://bhavinjawade.github.io/img/hero-3.jpg" width="40px" height="40px">
+          </div>
+          <div class="user-name  pad-zero" style="display: inline-block;    width: 70%;">
+            John
+          </div>
+          <span class="user-status-online user-status   pad-zero" >online</span>
+          <span class="user-status-offline user-status " style="display: none;">offline</span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: grey ;height: 10px;width: 10px;border-radius: 50%"></span></span>
+          <span style="position: absolute;top:19px"> <span class="online" style="background-color: rgb(66, 183, 42);height: 10px;width: 10px;border-radius: 50%"></span></span>
+        </div>
+      </li>
+
+    </ul>
+
+
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/chatapp.js"></script>
+  
+  <script src="assets/js/chat3.js "></script>
+
+
+  <!-- End emoji-picker JavaScript -->
+</body>
+
+</html>
